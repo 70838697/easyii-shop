@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $cat->model->title;
         <br>
     <?php endforeach; ?>
 <?php else : ?>
-    <p>Category is empty</p>
+    <p><?= Yii::t('app','Category is empty')?></p>
 <?php endif; ?>
 
 <?= $cat->pages() ?>
