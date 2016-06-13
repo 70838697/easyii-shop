@@ -18,4 +18,15 @@ return [
 	
 	/*Feedback*/
 	'Message successfully sent' => '你的消息已成功送达',
+
+	/*Guestbook*/
+	'Administrator' => '管理员',
+	'Leave message' => '留言',
+	'Message successfully added' => '消息已成功添加',
+	
+	/*Articles*/
+	'Category is empty' => '该分类没有文章',
+	/*News*/
+	'Photos' => '图片',
+	'Views' => '查看次数',
 	];

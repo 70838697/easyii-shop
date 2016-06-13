@@ -6,10 +6,10 @@ use yii\helpers\Url;
 
 $page = Page::get('page-news');
 
-$this->title = $page->seo('title', $page->model->title);
-$this->params['breadcrumbs'][] = $page->model->title;
+$this->title = Yii::t('app',$page->seo('title', $page->model->title));
+$this->params['breadcrumbs'][] = Yii::t('app',$page->model->title);
 ?>
-<h1><?= $page->seo('h1', $page->title) ?></h1>
+<h1><?= Yii::t('app',$page->seo('h1', $page->title)) ?></h1>
 <br/>
 
 <?php foreach($news as $item) : ?>

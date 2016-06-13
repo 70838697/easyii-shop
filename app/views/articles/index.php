@@ -5,8 +5,8 @@ use yii\helpers\Html;
 
 $page = Page::get('page-articles');
 
-$this->title = $page->seo('title', $page->model->title);
-$this->params['breadcrumbs'][] = $page->model->title;
+$this->title = Yii::t('app',$page->seo('title', $page->model->title));
+$this->params['breadcrumbs'][] = Yii::t('app',$page->model->title);
 
 function renderNode($node){
     if(!count($node->children)){
@@ -20,7 +20,7 @@ function renderNode($node){
     return $html;
 }
 ?>
-<h1><?= $page->seo('h1', $page->title) ?></h1>
+<h1><?= Yii::t('app',$page->seo('h1', $page->title)) ?></h1>
 
 <br/>
 <ul>
