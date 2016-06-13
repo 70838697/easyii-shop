@@ -27,7 +27,7 @@ function renderNode($node){
     <div class="col-md-8">
         <h1>
             <?= $page->seo('h1', $page->title) ?>
-            <a class="btn btn-success" href="<?= File::get('price-list')->file ?>"><i class="glyphicon glyphicon-save"></i> Download price list</a>
+            <a class="btn btn-success" href="<?= File::get(2)->file ?>"><i class="glyphicon glyphicon-save"></i> Download price list</a>
         </h1>
         <br/>
         <ul>

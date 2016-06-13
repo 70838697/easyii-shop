@@ -19,7 +19,7 @@ $goodsCount = count(Shopcart::goods());
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= Url::home() ?>">Easyii shop</a>
+                    <a class="navbar-brand" href="<?= Url::home() ?>">DaWoMa</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-menu">
@@ -27,7 +27,7 @@ $goodsCount = count(Shopcart::goods());
                         'options' => ['class' => 'nav navbar-nav'],
                         'items' => [
                             ['label' => 'Home', 'url' => ['site/index']],
-                            ['label' => 'Shop', 'url' => ['shop/index']],
+                           /* ['label' => 'Shop', 'url' => ['shop/index']],*/
                             ['label' => 'News', 'url' => ['news/index']],
                             ['label' => 'Articles', 'url' => ['articles/index']],
                             ['label' => 'Gallery', 'url' => ['gallery/index']],
@@ -36,13 +36,14 @@ $goodsCount = count(Shopcart::goods());
                             ['label' => 'Contact', 'url' => ['/contact/index']],
                         ],
                     ]); ?>
+                    <?php /* ?>
                     <a href="<?= Url::to(['/shopcart']) ?>" class="btn btn-default navbar-btn navbar-right" title="Complete order">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                         <?php if($goodsCount > 0) : ?>
                             <?= $goodsCount ?> <?= $goodsCount > 1 ? 'items' : 'item' ?> - <?= Shopcart::cost() ?>$
                         <?php else : ?>
                             <span class="text-muted">empty</span>
-                        <?php endif; ?>
+                        <?php endif;*/ ?>
                     </a>
 
                 </div>
