@@ -23,6 +23,7 @@ $this->title = $page->seo('title', $page->model->title);
 <br/>
 <hr/>
 
+<?php /*
 <div class="text-center">
     <h2>Last photos</h2>
     <br/>
@@ -34,7 +35,7 @@ $this->title = $page->seo('title', $page->model->title);
 
 <br/>
 <hr/>
-
+*/ ?>
 <div class="text-center">
     <h2>Last news</h2>
     <blockquote class="text-left">
@@ -46,7 +47,6 @@ $this->title = $page->seo('title', $page->model->title);
 
 <br/>
 <hr/>
-
 
 <div class="text-center">
     <h2>Last article from category #1</h2>
