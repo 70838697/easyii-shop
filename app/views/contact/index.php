@@ -4,10 +4,10 @@ use yii\easyii\modules\page\api\Page;
 
 $page = Page::get('page-contact');
 
-$this->title = $page->seo('title', $page->model->title);
-$this->params['breadcrumbs'][] = $page->model->title;
+$this->title = Yii::t('app',$page->seo('title', $page->model->title));
+$this->params['breadcrumbs'][] = Yii::t('app',$page->model->title);
 ?>
-<h1><?= $page->seo('h1', $page->title) ?></h1>
+<h1><?= Yii::t('app',$page->seo('h1', $page->title)) ?></h1>
 
 
 <div class="row">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $page->model->title;
     </div>
     <div class="col-md-4">
         <?php if(Yii::$app->request->get(Feedback::SENT_VAR)) : ?>
-            <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> Message successfully sent</h4>
+            <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('app','Message successfully sent')?></h4>
         <?php else : ?>
             <div class="well well-sm">
                 <?= Feedback::form() ?>
