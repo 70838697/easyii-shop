@@ -37,7 +37,7 @@ $this->title = $page->seo('title', $page->model->title);
 <hr/>
 */ ?>
 <div class="text-center">
-    <h2>Last news</h2>
+    <h2><?=Yii::t('app','Last news')?></h2>
     <blockquote class="text-left">
         <?= Html::a(News::last()->title, ['news/view', 'slug' => News::last()->slug]) ?>
         <br/>
@@ -49,7 +49,7 @@ $this->title = $page->seo('title', $page->model->title);
 <hr/>
 
 <div class="text-center">
-    <h2>Last article from category #1</h2>
+    <h2><?=Yii::t('app','Last article')?></h2>
     <br/>
     <div class="row text-left">
         <?php $article = Article::last(1, ['category_id' => 1]); ?>
@@ -68,7 +68,7 @@ $this->title = $page->seo('title', $page->model->title);
 <hr/>
 
 <div class="text-center">
-    <h2>Last reviews</h2>
+    <h2><?=Yii::t('app','Last reviews')?></h2>
     <br/>
     <div class="row text-left">
         <?php foreach(Guestbook::last(2) as $post) : ?>

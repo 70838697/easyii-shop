@@ -1,5 +1,6 @@
 <?php
 return [
+
 	/*first page*/
     'Home' => '首页',
     'News' => '新闻',
@@ -11,6 +12,10 @@ return [
     'Subscribe to newsletters' => '订阅新闻',
     'You have successfully subscribed' => '您已成功订阅',
 
+    'Last news' => '最新新闻',
+    'Last article' => '最新文章',
+    'Last reviews' => '最新评论',
+	
 	/*faq*/
     'Frequently Asked Question' => '经常被问到的问题',
     'Question' => '问',

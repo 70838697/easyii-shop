@@ -2,12 +2,12 @@
 use yii\easyii\modules\article\api\Article;
 use yii\helpers\Url;
 
-$this->title = Yii::t('app',$page->seo('title', $page->model->title));
+$this->title = Yii::t('app',$article->seo('title', $article->model->title));
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Articles'), 'url' => ['articles/index']];
 $this->params['breadcrumbs'][] = ['label' => $article->cat->title, 'url' => ['articles/cat', 'slug' => $article->cat->slug]];
 $this->params['breadcrumbs'][] = $article->model->title;
 ?>
-<h1><?= Yii::t('app',$page->seo('h1', $page->title)) ?></h1>
+<h1><?= Yii::t('app',$article->seo('h1', $article->title)) ?></h1>
 
 <?= $article->text ?>
 

@@ -2,11 +2,11 @@
 use yii\easyii\modules\news\api\News;
 use yii\helpers\Url;
 
-$this->title = Yii::t('app',$page->seo('title', $page->model->title));
+$this->title = Yii::t('app',$news->seo('title', $news->model->title));
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','News'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = $news->model->title;
 ?>
-<h1><?= Yii::t('app',$page->seo('h1', $page->title)) ?></h1>
+<h1><?= Yii::t('app',$news->seo('h1', $news->title)) ?></h1>
 
 <?= $news->text ?>
 
