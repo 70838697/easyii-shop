@@ -34,4 +34,8 @@ return [
 	/*News*/
 	'Photos' => '图片',
 	'Views' => '查看次数',
-	];
+
+    /*Download*/
+    'Download' => '下载',
+    'Resources and software for downloading' => '可以下载的软件和资源',
+];
