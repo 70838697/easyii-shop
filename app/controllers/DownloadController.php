@@ -49,7 +49,7 @@ class DownloadController extends Controller
 					'debug'  => false,
 					'roots'  => array(
 						array_merge($rights,
-							array('path'   => dirname(__DIR__).'../../software/')
+							array('path'   => dirname(__DIR__).'/../software/')
 						)
 					)   
 				)
@@ -61,7 +61,7 @@ class DownloadController extends Controller
 					'debug'  => false,
 					'roots'  => array(
 						array_merge($rights,
-							array('path'   => dirname(__DIR__).'../../software/yii2elfinder')
+							array('path'   => dirname(__DIR__).'/../software/yii2elfinder')
 						)
 					)   
 				)
@@ -73,7 +73,7 @@ class DownloadController extends Controller
 					'debug'  => false,
 					'roots'  => array(
 						array_merge($rights,
-							array('path'   => dirname(__DIR__).'../../software/dawoma')
+							array('path'   => dirname(__DIR__).'/../software/dawoma')
 						)
 					)   
 				)
@@ -87,6 +87,29 @@ class DownloadController extends Controller
     public function actionDawoma()
     {
         return $this->render('dawoma');
+    }
+    public function actionGetupdate()
+    {
+		ini_set('max_execution_time', 300); 
+		$name	= $_GET['file'];
+		/*dirname(__DIR__)=/home/dawomu9q/public_html/app/controllers*/
+		$upload_path = dirname(__DIR__).'/../software/dawoma/update/';
+		$fichero=$upload_path.$_GET['file'];
+		//check file exists and it is a file in the subdirectory
+		if (is_file($fichero)&&(FALSE!==realpath($upload_path))&&(FALSE!==realpath($fichero))&& (strpos(realpath($fichero),realpath($upload_path))===0)) {
+			
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			header('Content-Disposition: attachment; filename="'.basename($fichero).'"');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($fichero));
+			readfile($fichero);
+		}
+		else
+			throw new \yii\web\NotFoundHttpException();
+		exit();
     }
     public function actionYii2elfinder()
     {
