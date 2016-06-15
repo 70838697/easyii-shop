@@ -19,30 +19,32 @@ $goodsCount = count(Shopcart::goods());
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= Url::home() ?>">Easyii shop</a>
+                    <a class="navbar-brand" href="<?= Url::home() ?>"><font color=red>Da</font><font color=yellow>Wo</font><font color=green>Ma</font></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <?= Menu::widget([
                         'options' => ['class' => 'nav navbar-nav'],
                         'items' => [
-                            ['label' => 'Home', 'url' => ['site/index']],
-                            ['label' => 'Shop', 'url' => ['shop/index']],
-                            ['label' => 'News', 'url' => ['news/index']],
-                            ['label' => 'Articles', 'url' => ['articles/index']],
-                            ['label' => 'Gallery', 'url' => ['gallery/index']],
-                            ['label' => 'Guestbook', 'url' => ['guestbook/index']],
-                            ['label' => 'FAQ', 'url' => ['faq/index']],
-                            ['label' => 'Contact', 'url' => ['/contact/index']],
+                            ['label' => Yii::t('app','Home'), 'url' => ['site/index']],
+                           /* ['label' => Yii::t('app','Shop'), 'url' => ['shop/index']],*/
+                            ['label' => Yii::t('app','News'), 'url' => ['news/index']],
+                            ['label' => Yii::t('app','Articles'), 'url' => ['articles/index']],
+                            ['label' => Yii::t('app','Download'), 'url' => ['download/index']],
+                           /* ['label' => Yii::t('app','Gallery'), 'url' => ['gallery/index']],*/
+                            ['label' => Yii::t('app','Guestbook'), 'url' => ['guestbook/index']],
+                            ['label' => Yii::t('app','FAQ'), 'url' => ['faq/index']],
+                            ['label' => Yii::t('app','Contact'), 'url' => ['/contact/index']],
                         ],
                     ]); ?>
+                    <?php /* ?>
                     <a href="<?= Url::to(['/shopcart']) ?>" class="btn btn-default navbar-btn navbar-right" title="Complete order">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                         <?php if($goodsCount > 0) : ?>
                             <?= $goodsCount ?> <?= $goodsCount > 1 ? 'items' : 'item' ?> - <?= Shopcart::cost() ?>$
                         <?php else : ?>
                             <span class="text-muted">empty</span>
-                        <?php endif; ?>
+                        <?php endif;*/ ?>
                     </a>
 
                 </div>
@@ -64,17 +66,17 @@ $goodsCount = count(Shopcart::goods());
     <div class="container footer-content">
         <div class="row">
             <div class="col-md-2">
-                Subscribe to newsletters
+                <?=Yii::t('app','Subscribe to newsletters') ?>
             </div>
             <div class="col-md-6">
                 <?php if(Yii::$app->request->get(Subscribe::SENT_VAR)) : ?>
-                    You have successfully subscribed
+                    <?=Yii::t('app','You have successfully subscribed') ?>
                 <?php else : ?>
                     <?= Subscribe::form() ?>
                 <?php endif; ?>
             </div>
             <div class="col-md-4 text-right">
-                ©2015 noumo
+                ©2015 DaWoMa.com
             </div>
         </div>
     </div>

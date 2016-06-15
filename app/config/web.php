@@ -9,13 +9,13 @@ $config = [
     'id' => 'app',
     'basePath' => $basePath,
     'bootstrap' => ['log'],
-    'language' => 'en-US',
+    'language' => 'zh-CN',
     'runtimePath' => $webroot . '/runtime',
     'vendorPath' => $webroot . '/vendor',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'cdBhj7QDgNjFr8cBd6oM',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -60,6 +60,10 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
+    'aliases' => [
+        '@yii2elfinder' => '@vendor/yii2elfinder',
+        '@yii/jui' => '@vendor/yiisoft/yii2-jui',
+    ],
 ];
 
 if (YII_ENV_DEV) {
