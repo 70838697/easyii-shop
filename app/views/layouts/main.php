@@ -30,7 +30,7 @@ $goodsCount = count(Shopcart::goods());
                            /* ['label' => Yii::t('app','Shop'), 'url' => ['shop/index']],*/
                             ['label' => Yii::t('app','News'), 'url' => ['news/index']],
                             ['label' => Yii::t('app','Articles'), 'url' => ['articles/index']],
-                            ['label' => Yii::t('app','Download'), 'url' => ['download/index']],
+                            ['label' => Yii::t('app','Download'), 'url' => [Yii::$app->user->isGuest?'download/dawoma':'download/index']],
                            /* ['label' => Yii::t('app','Gallery'), 'url' => ['gallery/index']],*/
                             ['label' => Yii::t('app','Guestbook'), 'url' => ['guestbook/index']],
                             ['label' => Yii::t('app','FAQ'), 'url' => ['faq/index']],
