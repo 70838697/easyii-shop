@@ -100,7 +100,6 @@ $config = [
     ],
     'params' => $params,
     'aliases' => [
-        '@yii2elfinder' => '@vendor/yii2elfinder',
         '@yii/jui' => '@vendor/yiisoft/yii2-jui',
     ],
 ];
