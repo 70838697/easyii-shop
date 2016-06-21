@@ -99,9 +99,6 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
-    'aliases' => [
-        '@yii/jui' => '@vendor/yiisoft/yii2-jui',
-    ],
 ];
 
 if (YII_ENV_DEV) {
