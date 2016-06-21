@@ -28,9 +28,9 @@ $config = [
             // IP address or list of IP addresses with access to the viewer, null for everyone (if the IP matches)
             'accessIps' => [], 
             // Role or list of roles with access to the viewer, null for everyone (if the user matches)
-            //'accessRoles' => ['admin'],
+            'accessRoles' => null,
             // User ID or list of user IDs with access to the viewer, null for everyone (if the role matches)
-            //'accessUsers' => [],
+            'accessUsers' => [0],
             // Compress extra data generated or just keep in text? For people who don't like binary data in the DB
             'compressData' => false,
             // The callback to use to convert a user id into an identifier (username, email, ...). Can also be html.
